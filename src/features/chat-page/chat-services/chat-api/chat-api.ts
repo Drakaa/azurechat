@@ -13,7 +13,7 @@ import {
 import { EnsureChatThreadOperation } from "../chat-thread-service";
 import { ChatThreadModel, UserPrompt } from "../models";
 import { mapOpenAIChatMessages } from "../utils";
-import { GetDefaultExtensions } from "./chat-api-default-extensions";
+// import { GetDefaultExtensions } from "./chat-api-default-extensions";
 import { GetDynamicExtensions } from "./chat-api-dynamic-extensions";
 import { ChatApiExtensions } from "./chat-api-extension";
 import { ChatApiMultimodal } from "./chat-api-multimodal";
@@ -131,7 +131,7 @@ const _getDocuments = async (chatThread: ChatThreadModel) => {
   console.error("🔴 Error on AI search:", docsResponse.errors);
   return [];
 };
-
+/*
 const _getExtensions = async (props: {
   chatThread: ChatThreadModel;
   userMessage: string;
@@ -146,7 +146,7 @@ const _getExtensions = async (props: {
   });
   if (response.status === "OK" && response.response.length > 0) {
     extension.push(...response.response);
-  }
+ }
 
   const dynamicExtensionsResponse = await GetDynamicExtensions({
     extensionIds: props.chatThread.extension,
@@ -160,3 +160,4 @@ const _getExtensions = async (props: {
 
   return extension;
 };
+*/
