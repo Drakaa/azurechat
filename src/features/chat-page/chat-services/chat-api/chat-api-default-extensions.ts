@@ -35,7 +35,8 @@ export const GetDefaultExtensions = async (props: {
         },
       },
       description:
-        "You must only use this tool if the user asks you to create an image. You must only use this tool once per message.",
+        // "You must only use this tool if the user asks you to create an image. You must only use this tool once per message.",
+        "You will never use this tool, it is disabled for this release.",
       name: "create_img",
    },
   });
