@@ -138,7 +138,7 @@ const _getExtensions = async (props: {
   signal: AbortSignal;
 }) => {
   const extension: Array<any> = [];
-
+/*
   const response = await GetDefaultExtensions({
     chatThread: props.chatThread,
     userMessage: props.userMessage,
@@ -147,7 +147,7 @@ const _getExtensions = async (props: {
   if (response.status === "OK" && response.response.length > 0) {
     extension.push(...response.response);
  }
-
+*/
   const dynamicExtensionsResponse = await GetDynamicExtensions({
     extensionIds: props.chatThread.extension,
   });
