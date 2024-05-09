@@ -2,11 +2,12 @@
 import "server-only";
 
 import { ServerActionResponse } from "@/features/common/server-action-response";
-// import { OpenAIDALLEInstance } from "@/features/common/services/openai";
+import { OpenAIDALLEInstance } from "@/features/common/services/openai";
 import { uniqueId } from "@/features/common/util";
 import { GetImageUrl, UploadImageToStore } from "../chat-image-service";
 import { ChatThreadModel } from "../models";
 
+/*
 export const GetDefaultExtensions = async (props: {
   chatThread: ChatThreadModel;
   userMessage: string;
@@ -15,28 +16,28 @@ export const GetDefaultExtensions = async (props: {
   const defaultExtensions: Array<any> = [];
 
   // Add image creation Extension
- // defaultExtensions.push({
- //   type: "function",
- //   function: {
- //     function: async (args: any) =>
-  //      await executeCreateImage(
-  //        args,
-  //        props.chatThread.id,
-  //        props.userMessage,
- //         props.signal
- //       ),
- //     parse: (input: string) => JSON.parse(input),
- //     parameters: {
- //       type: "object",
- //       properties: {
- //         prompt: { type: "string" },
- //       },
-//      },
- //     description:
-//        "You must only use this tool if the user asks you to create an image. You must only use this tool once per message.",
- //     name: "create_img",
- //   },
-//  });
+  defaultExtensions.push({
+    type: "function",
+    function: {
+      function: async (args: any) =>
+        await executeCreateImage(
+          args,
+          props.chatThread.id,
+          props.userMessage,
+          props.signal
+        ),
+      parse: (input: string) => JSON.parse(input),
+     parameters: {
+        type: "object",
+        properties: {
+          prompt: { type: "string" },
+        },
+      },
+      description:
+        "You must only use this tool if the user asks you to create an image. You must only use this tool once per message.",
+      name: "create_img",
+   },
+  });
 
   // Add any other default Extension here
 
@@ -46,7 +47,7 @@ export const GetDefaultExtensions = async (props: {
   };
 };
 
-/* Extension for image creation using DALL-E
+// Extension for image creation using DALL-E
  async function executeCreateImage(
   args: { prompt: string },
   threadId: string,
