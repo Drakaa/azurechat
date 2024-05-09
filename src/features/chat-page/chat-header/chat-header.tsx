@@ -8,9 +8,9 @@ import { ExtensionDetail } from "./extension-detail";
 import { PersonaDetail } from "./persona-detail";
 
 interface Props {
-  chatThread: ChatThreadModel;
+  // chatThread: ChatThreadModel;
   chatDocuments: Array<ChatDocumentModel>;
-  extensions: Array<ExtensionModel>;
+  // extensions: Array<ExtensionModel>;
 }
 
 export const ChatHeader: FC<Props> = (props) => {
