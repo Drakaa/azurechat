@@ -8,17 +8,17 @@ import { ExtensionDetail } from "./extension-detail";
 import { PersonaDetail } from "./persona-detail";
 
 interface Props {
-  // chatThread: ChatThreadModel;
+  chatThread: ChatThreadModel;
   chatDocuments: Array<ChatDocumentModel>;
-  // extensions: Array<ExtensionModel>;
+  extensions: Array<ExtensionModel>;
 }
 
 export const ChatHeader: FC<Props> = (props) => {
   const persona =
     props.chatThread.personaMessageTitle === "" ||
     props.chatThread.personaMessageTitle === undefined
-      ? CHAT_DEFAULT_PERSONA
-      : props.chatThread.personaMessageTitle;
+    ? CHAT_DEFAULT_PERSONA
+    : props.chatThread.personaMessageTitle;
   return (
     <div className="bg-background border-b flex items-center py-2">
       <div className="container max-w-3xl flex justify-between items-center">
