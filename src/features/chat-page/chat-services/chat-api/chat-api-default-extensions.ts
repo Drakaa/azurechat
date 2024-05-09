@@ -49,6 +49,7 @@ export const GetDefaultExtensions = async (props: {
   };
 };
 
+/*
 // Extension for image creation using DALL-E
  async function executeCreateImage(
   args: { prompt: string },
@@ -127,4 +128,4 @@ export const GetDefaultExtensions = async (props: {
     };
   }
 }
-
+*/
