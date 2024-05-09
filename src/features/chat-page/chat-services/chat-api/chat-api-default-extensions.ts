@@ -14,7 +14,7 @@ export const GetDefaultExtensions = async (props: {
   signal: AbortSignal;
 }): Promise<ServerActionResponse<Array<any>>> => {
   const defaultExtensions: Array<any> = [];
-
+/*
   // Add image creation Extension
   defaultExtensions.push({
     type: "function",
@@ -38,7 +38,7 @@ export const GetDefaultExtensions = async (props: {
       name: "create_img",
    },
   });
-
+*/
   // Add any other default Extension here
 
   return {
