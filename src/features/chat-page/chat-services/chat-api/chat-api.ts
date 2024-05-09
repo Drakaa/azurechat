@@ -34,11 +34,11 @@ export const ChatAPIEntry = async (props: UserPrompt, signal: AbortSignal) => {
     getCurrentUser(),
     _getHistory(currentChatThread),
     _getDocuments(currentChatThread),
-    _getExtensions({
-      chatThread: currentChatThread,
-      userMessage: props.message,
-      signal,
-    }),
+    // _getExtensions({
+    //  chatThread: currentChatThread,
+    //  userMessage: props.message,
+    //  signal,
+   // }),
   ]);
   // Starting values for system and user prompt
   // Note that the system message will also get prepended with the extension execution steps. Please see ChatApiExtensions method.
